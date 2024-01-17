@@ -1,0 +1,10 @@
+.goal-square {
+    display: flex; 
+    /* text-align: center; */
+    font-size: 32px; 
+    height: 250px;
+    width: 250px;
+    color: blue;
+    margin: 2rem; 
+    background-color: brown;
+}

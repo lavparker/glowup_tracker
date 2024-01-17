@@ -62,7 +62,7 @@ const Login = () => {
                     id="password" 
                     ref={userRef}
                     autoComplete='off'
-                    onChange={(e) => setPassword(e.target.value)}
+                    // onChange={(e) => setPassword(e.target.value)}
                     value={pwd} //makes this a controlled input allows us to clear input upon submission 
                     required 
                     />
