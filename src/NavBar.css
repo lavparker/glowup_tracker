@@ -1,5 +1,7 @@
 .goal-square {
-    display: grid; 
+    /* display: grid;  */
+    display: flex; 
+    flex-direction: row;
     /* text-align: center; */
     font-size: 32px; 
     height: 250px;
@@ -7,9 +9,11 @@
     color: blue;
     margin: 2rem; 
     background-color: brown;
+    flex-wrap: wrap ;
+
 }
 
 .goal-square:hover{
-    border:40px;
-    border-color: aqua;
+    border-radius:40px;
+    border-color:green;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import './NavBar.css';
 
+
 function NavBar(props) {
 
     const glowups = [
@@ -25,7 +26,7 @@ function NavBar(props) {
                 {glowups.map((goal) => (
                     <div className='goal-square' key={goal.id}>
                         {goal.glowup}
-                        <img src={require(`./images/${goal.image}`).default} alt={`${goal.glowup} Image`} />
+                        <img src={`${process.env.PUBLIC_URL}/images/${goal.image}`} alt={`${goal.glowup} Image`} />
                         hello
                     </div>
                 ))}
