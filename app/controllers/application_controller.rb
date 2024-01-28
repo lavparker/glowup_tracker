@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-    class ApplicationController < ActionController::Base
+
     # #chrlll
 
   helper_method :current_user, :logged_in?
@@ -31,5 +31,5 @@ class ApplicationController < ActionController::Base
       render json: { base: ['invalid credentials'] }, status: 401
     end
   end
-end
+
 end
