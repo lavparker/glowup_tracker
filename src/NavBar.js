@@ -32,7 +32,7 @@ function NavBar(props) {
                 ))}
             </ul>
 
-            
+
         </>
 
 

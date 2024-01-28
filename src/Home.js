@@ -11,4 +11,4 @@ import './NavBar.css';
 //     )
 // }
 
-export default Home;
+// export default Home;
