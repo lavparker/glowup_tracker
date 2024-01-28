@@ -1,14 +1,14 @@
 import React from 'react';
 import './NavBar.css';
 
-function Home(props) {
-    const morning = ;
-    const evening = ;
+// function Home(props) {
+//     const morning = ;
+//     const evening = ;
 
 
-    return(
+//     return(
 
-    )
-}
+//     )
+// }
 
 export default Home;

@@ -1,0 +1,68 @@
+<%# serves at the view for creating a new user %>
+
+<!-- -->
+<!-- app/views/users/new.html.erb -->
+<h1>Create User</h1>
+
+<%= render "form", user: @user %> <!--This file serves as the view for creating a new user. It includes a partial (_form.html.erb) to handle the form rendering. The user: @user is passing the @user instance variable to the partial. -->
+
+<!-- app/views/users/_form.html.erb (User form Partial) -->
+<% action = (user.persisted? ? user_url(user) : users_url) %> <!-- sets the form's action URL based on whether the user already exists -->
+<% method = (user.persisted? ? "patch" : "post") %><!--sets the HTTP method for the form-->
+<% message = (user.persisted? ? "Update user" : "Create user" ) %> <!--sets the text for the submit button based on whether the user already exists-->
+
+<form action="<%= action %>" method="post">
+    <input
+        name="_method"
+        type="hidden"
+        value="<%= method %>"> <!--uses hidden input fields for the HTTP method-->
+
+    <input
+        name="authenticity_token"
+        type="hidden"
+        value="<%= form_authenticity_token %>"> <!--the authenticity token is a security measure to protect against Cross-Site Request Forgery (CSRF) attacks.-->
+
+    <label for="user_username">Username</label>
+    <input
+        id="user_username"
+        name="user[username]"
+        type="text">
+
+    <br>
+
+    <label for="user_email">Email</label>
+    <input
+        id="user_email"
+        name="user[email]"
+        type="text">
+    <br>
+
+    <label for="user_first_name">First Name</label>
+    <input
+        id="user_first_name"
+        name="user[first_name]"
+        type="text">
+
+    <br>
+
+    <label for="user_last_name">Last Name</label>
+     <input
+        id="user_last_name"
+        name="user[last_name]"
+        type="text">
+
+    <br>
+
+    <label for="user_password">Password</label>
+    <input
+        id="user_password"
+        name="user[password]"
+        type="password">
+
+    <br>
+
+    <input type="submit" value="<%= message %>">
+
+
+
+</form>
